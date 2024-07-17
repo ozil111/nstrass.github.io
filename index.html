@@ -59,6 +59,7 @@
     </style>
     <script>
         function checkRedirect() {
+            console.log("Version: " + new Date().getTime());
         var secretKey = "开启";
         if (window.location.hash === "#" + secretKey) {
             window.location.href = "https://24.199.120.10:22887";
